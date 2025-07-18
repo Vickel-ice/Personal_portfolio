@@ -1,0 +1,416 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #7600bc;
+  --secondary-background: #f0f0f0;
+  --nav-background: #7600bc;
+  --nav-text-color: lightgray;
+  --nav-text-hover: white;
+  --border-color: lightgray;
+  --shadow-color: gray;
+  --popup-background: #e8bcf0;
+}
+
+body.dark-mode {
+    --background-color: #1a1a1a;        /* Dark background */
+    --text-color: #e0e0e0;             /* Light text */
+    --primary-color: #bb86fc;          /* A lighter purple for dark mode */
+    --secondary-background: #2a2a2a;   /* Slightly lighter dark background for elements */
+    --nav-background: #333333;         /* Darker nav background */
+    --nav-text-color: #e0e0e0;
+    --nav-text-hover: #ffffff;
+    --border-color: #555555;
+    --shadow-color: rgba(0, 0, 0, 0.7); /* Darker shadow */
+    --popup-background: #4a148c;       /* Darker popup color */
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 0 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;;
+}
+
+/* Navigation Bar */
+
+#home {
+  background-color:  #7600bc;
+  padding-bottom: 1cm;
+  margin-left:-1cm;
+  margin-right:-6cm;
+  margin-top:-1cm;
+  padding-top: 2cm;
+  padding-bottom: 3cm;
+  height: 5mm;
+ }
+
+.topmenu {
+  color: lightgray;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  text-decoration:none;
+}
+
+.topmenu:hover {
+  color: white;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.topdiv {
+  float: right;
+  padding-right: 1cm;
+}
+
+.profile_name {
+  float: left;
+  color: white;
+  padding-left: 1cm;
+  font-size: 30px;
+}
+
+.profile_name .contact_info {
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contact_info img {
+  width:25px;
+  margin-right: 10px;
+  float:left;
+}
+
+/* Titles */
+
+h2 {
+  text-align: justify;
+  font-size: 50px;
+  text-align: center;
+  float: left;
+  color: #7600bc;
+  margin: 30px;
+  margin-left: 60px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.introduction {
+  text-align: justify;
+  font-size: 30px;
+  text-align: center;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  animation-duration: 5s;
+  position: relative;
+}
+
+/* Used in the About Me sections */
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  padding: 20px;
+}
+
+/* About Me */
+
+.about-me {
+  display: flex;
+  align-items: center;
+}
+
+#about-me h1 {
+  font-size: 65px;
+  margin-top: 90px;
+  color: var(--primary-color);
+}
+
+#about-me p {
+  font-size: 25px;
+  color: var(--text-color);
+  margin-top: -1cm;
+}
+
+.profile_image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Skills */
+
+.all_skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+
+.skill { 
+  border: 1px solid gray;
+  /*display: inline-block; */
+  border-radius: 6px;
+  text-align: center;
+  padding: 10px;
+  width: 2in;
+  font-size: 20px;
+  box-shadow: 0 3px 10px gray;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.skill img {
+  height: 35px;
+}
+
+
+
+.skills h6 {
+  font-size: 20px;
+  margin: 8px 0 5px;
+  font-weight: bold;
+}
+ 
+
+.skills p {
+ text-align: center;
+}
+  
+
+.skill.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Projects */
+
+.projects-container {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.projects-container hr {
+  border: 1px solid lightgray;
+  width: 75%;
+  margin-left: 5cm;
+}
+
+.project-card {
+  margin: 0 15px 15px 30px;
+  padding-bottom: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card h3 {
+  font-size: 25px;
+  margin-left: 30px;
+  color: var(--primary-color);
+}
+
+.project-card li {
+  font-size: 20px;
+  margin-left: 30px;
+  color: var(--text-color);
+}
+
+/* Recommendations */
+
+.all_recommendations {
+  display: flex;
+ /** align-items: center; */
+ /* flex-direction: row; */
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  /**align-items: flex-start; */
+  justify-content: center;
+}
+
+.recommendation {
+  font-style: italic;
+  width: 21.875rem;
+  padding: 20px;
+  background-color: var(--secondary-background);
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--shadow-shadow);
+  margin: 10px;
+  border:1px solid var(--border-color);
+  font-size: 18px;
+  height: 150px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.recommendation span {
+  color: #7600bc;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.recommendation.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Scroll to Top Button */
+
+.iconbutton{
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #7600bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Form Pop-up */
+
+.popup {
+  width:400px;
+  background-color: #e8bcf0;
+  border-radius: 3mm;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  position: fixed;
+  /* padding: 30px; */
+  visibility: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.popup img {
+  padding-top: 20px;
+}
+
+.popup button {
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 2in;
+  font-size: 20px;
+  margin-left: 25%;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: #fff;
+  border: 2px solid #7600bc;
+  color: #7600bc;
+  display: block;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 25%;
+}
+
+/* Recommendation Form */
+
+input, textarea {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  margin: 10px;  
+  width:100%;
+  background-color: var(--secondary-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+fieldset {
+  display: flexbox;
+  align-content: center;
+  justify-content: center;  
+  padding: 25px; 
+  margin-left: 50px; 
+  margin-right: 50px;   
+  border: thin solid var(--border-color);
+  width: 50%;
+  transition: border-color 0.3s ease;
+}
+
+
+/* Buttons */
+
+button:not(#theme-toggle) {
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 2in;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button:not(#theme-toggle):hover {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--nav-text-hover);
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Style the theme-toggle button explicitly if it needs different hover behavior */
+#theme-toggle {
+    /* It already has .topmenu styles, you might want to adjust its specific hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Example for a subtle hover on dark nav */
+    /* You might want to adjust this based on the new nav-background */
+}
+
+/* System Preference Detection (Optional but Recommended) */
+@media (prefers-color-scheme: dark) {
+    body:not(.light-mode) { /* This ensures explicit user choice overrides system preference */
+        --background-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --primary-color: #bb86fc;
+        --secondary-background: #2a2a2a;
+        --nav-background: #333333;
+        --nav-text-color: #e0e0e0;
+        --nav-text-hover: #ffffff;
+        --border-color: #555555;
+        --shadow-color: rgba(0, 0, 0, 0.7);
+        --popup-background: #4a148c;
+    }
+}
+
